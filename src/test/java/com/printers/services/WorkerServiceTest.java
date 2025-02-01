@@ -9,16 +9,15 @@ import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.printers.entities.Worker;
 import com.printers.exception.WorkerNotFoundException;
 import com.printers.models.WorkerMapper;
 import com.printers.repository.WorkerRepository;
+import com.printers.services.impl.WorkerServiceImpl;
 import com.printers.views.WorkerDto;
 
 //@ExtendWith(MockitoExtension.class)
@@ -28,7 +27,7 @@ public class WorkerServiceTest {
     private WorkerRepository workerRepository;
 
     @InjectMocks
-    private WorkerService workerService;
+    private WorkerServiceImpl workerService;
 
     @BeforeEach
     public void setUp() {
